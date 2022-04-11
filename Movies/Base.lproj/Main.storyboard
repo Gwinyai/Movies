@@ -19,6 +19,52 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5Jv-vY-NPu">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieTableViewCell" rowHeight="140" id="Szd-GR-hZV" customClass="MovieTableViewCell" customModule="Movies" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="140"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Szd-GR-hZV" id="eKl-lO-IqU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8UA-P7-HvB">
+                                                    <rect key="frame" x="20" y="20" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="4xt-VW-Xd7"/>
+                                                        <constraint firstAttribute="width" constant="60" id="G5v-g6-IJw"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBR-yI-yUF">
+                                                    <rect key="frame" x="95" y="20" width="299" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hhe-un-urD">
+                                                    <rect key="frame" x="95" y="56.5" width="299" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="xBR-yI-yUF" firstAttribute="leading" secondItem="8UA-P7-HvB" secondAttribute="trailing" constant="15" id="59Y-p0-NrI"/>
+                                                <constraint firstItem="Hhe-un-urD" firstAttribute="top" secondItem="xBR-yI-yUF" secondAttribute="bottom" constant="15" id="HD6-wR-03S"/>
+                                                <constraint firstItem="8UA-P7-HvB" firstAttribute="top" secondItem="eKl-lO-IqU" secondAttribute="top" constant="20" id="Hc4-ow-lm8"/>
+                                                <constraint firstItem="Hhe-un-urD" firstAttribute="leading" secondItem="8UA-P7-HvB" secondAttribute="trailing" constant="15" id="SUk-rQ-dQg"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hhe-un-urD" secondAttribute="trailing" constant="20" id="ZlM-r2-vuI"/>
+                                                <constraint firstItem="xBR-yI-yUF" firstAttribute="top" secondItem="eKl-lO-IqU" secondAttribute="top" constant="20" id="ck4-fT-GAk"/>
+                                                <constraint firstItem="8UA-P7-HvB" firstAttribute="leading" secondItem="eKl-lO-IqU" secondAttribute="leading" constant="20" id="h1J-7Z-qJv"/>
+                                                <constraint firstAttribute="trailing" secondItem="xBR-yI-yUF" secondAttribute="trailing" constant="20" id="lVG-JF-chy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="movieDescriptionLabel" destination="Hhe-un-urD" id="aDX-ek-31H"/>
+                                            <outlet property="movieImageView" destination="8UA-P7-HvB" id="ycS-ZY-X10"/>
+                                            <outlet property="movieTitleLabel" destination="xBR-yI-yUF" id="0D1-gc-SgK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
