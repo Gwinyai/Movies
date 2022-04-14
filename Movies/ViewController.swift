@@ -17,12 +17,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     let movies = [Movie(movieImage: nil, movieTitle: "SpiderMan", movieDescription: "The third movie"),
-                    Movie(movieImage: nil, movieTitle: "BatMan", movieDescription: "The Remake")]
+                    Movie(movieImage: nil, movieTitle: "BatMan", movieDescription: "The Remake whqdqwjkdjkqw dbqwbdjqw diquwdiuqwgdiq iudqwuigqwuid doiwqdiuqwguiqw igqwduidgqwiu oiwdhoqwgdqwb dqiwugwuqgdq uiqwgdiquwdgqiu iuqwgdugqwudgwqd")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.estimatedRowHeight = CGFloat(140)
+        tableView.rowHeight = UITableView.automaticDimension
     }
 
 }
@@ -45,9 +47,6 @@ extension ViewController: UITableViewDataSource {
 
 extension ViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(140)
-    }
     
 }
 
